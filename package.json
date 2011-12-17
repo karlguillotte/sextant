@@ -1,0 +1,13 @@
+{
+    "name": "Sextant"
+  , "version": "0.0.1"
+  , "private": true
+  , "main": "app.js"
+  , "dependencies": {
+      "express": "latest"
+    , "stache": "latest"
+	, "markdown": "latest"
+	, "express-rewrite": "latest"
+	, "underscore": "latest"
+  }
+}

@@ -1,0 +1,118 @@
+@import 'boilerplate.less';
+
+body {
+	font: 16px "American Typewriter", Georgia, sans-serif;
+}
+
+h2, h3 {
+	text-shadow:#F8FCEE 0 2px 2px;
+	font-size:130%;
+	font-weight:normal;
+}
+h3 {
+	font-size:100%;
+}
+
+a {
+  color: @link;
+}
+
+
+#container {
+	.rounded-corners();
+	background:@background;
+	margin-top:@offset;
+	margin-bottom:@offset;
+}
+
+#sextant-location {
+	color:@background;
+	cursor:pointer;
+}
+
+section {
+	.vertical-padding();
+	display:inline;
+	.title {
+		h2 {
+			float:right;
+		}
+	}
+	p {
+		font-size:95%;
+	}
+}
+
+#work {
+	h2 {
+		color:#A33825;
+	}
+}
+#people {
+	h2 {
+		color:#0F1390;
+	}
+}
+#product {
+	h2 {
+		color:#F05926;
+	}
+}
+ul {
+	list-style-type:none;
+	display:inline;
+	.vertical-margin(0);
+	li {
+		float:right;
+		.horizontal-margin(3px);
+		a {
+			font-size:85%;
+			background:#FFF;
+			padding:3px;
+			text-decoration:none;
+		}
+	}
+}
+
+footer {
+	h2 {
+		color:#AA618D;
+	}
+	#map-wrapper {
+		margin-bottom:@offset;
+		.rounded-corners(8px);
+		color:@background;
+	    overflow:hidden;
+		#map {
+			height:300px;
+		}
+	}
+	ul {
+		li {
+			a {
+				.top-rounded-corners(4px);
+			}
+		}
+	}
+}
+
+
+header {
+	.description {
+		padding-top: 10px; 
+	}
+	h1 {
+		background:#FFF;
+		margin-left: 0 !important;
+		.padding(5px);
+		.right-rounded-corners(6px);
+	}
+	ul {
+		li {
+			a {
+				.bottom-rounded-corners(4px);
+			}
+		}
+	}
+}
+

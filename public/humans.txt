@@ -1,0 +1,17 @@
+/* the humans responsible & colophon */
+/* humanstxt.org */
+
+
+/* TEAM */
+  Web-mapping and geo-informatics developper: Karl Guillotte
+  Site: sextant.ca
+  Twitter: @karlguillotte
+  Location: Vancouver, British Columnbia, Canada
+
+/* THANKS */
+  Names (& URL):
+
+/* SITE */
+  Standards: HTML5, CSS3
+  Components: HTML5 Boilerplate, Modernizr, jQuery, Polymaps, Underscore, Express
+  Software: Node.JS

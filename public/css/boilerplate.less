@@ -1,0 +1,66 @@
+/* Colors */
+@background:#D8DCCE;
+@light-background:#AAA;
+@link:#00B7FF;
+
+/* Offsets */
+@offset:10px;
+
+/* Functions */
+.rounded-corners (@radius: @offset) {
+  border-radius: @radius;
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+}
+.left-rounded-corners (@radius: @offset) {
+	-webkit-border-top-left-radius: @radius;
+	-webkit-border-bottom-left-radius: @radius;
+	-moz-border-radius-topleft: @radius;
+	-moz-border-radius-bottomleft: @radius;
+	border-top-left-radius: @radius;
+	border-bottom-left-radius: @radius;
+}
+.right-rounded-corners (@radius: @offset) {
+	-webkit-border-top-right-radius: @radius;
+	-webkit-border-bottom-right-radius: @radius;
+	-moz-border-radius-topright: @radius;
+	-moz-border-radius-bottomright: @radius;
+	border-top-right-radius: @radius;
+	border-bottom-right-radius: @radius;
+}
+.bottom-rounded-corners (@radius: @offset) {
+	-webkit-border-bottom-left-radius: @radius;
+	-webkit-border-bottom-right-radius: @radius;
+	-moz-border-radius-bottomleft: @radius;
+	-moz-border-radius-bottomright: @radius;
+	border-bottom-left-radius: @radius;
+	border-bottom-right-radius: @radius;
+}
+.top-rounded-corners (@radius: @offset) {
+	-webkit-border-top-left-radius: @radius;
+	-webkit-border-top-right-radius: @radius;
+	-moz-border-radius-topleft: @radius;
+	-moz-border-radius-topright: @radius;
+	border-top-left-radius: @radius;
+	border-top-right-radius: @radius;
+}
+.vertical-padding(@padding: @offset) {
+	padding-top:@padding;
+	padding-bottom:@padding;
+}
+.vertical-margin(@padding: @offset) {
+	margin-top:@padding;
+	margin-bottom:@padding;
+}
+.horizontal-padding(@padding: @offset) {
+	padding-left:@padding;
+	padding-right:@padding;
+}
+.horizontal-margin(@padding: @offset) {
+	margin-left:@padding;
+	margin-right:@padding;
+}
+.padding(@padding: @offset) {
+	.vertical-padding(@padding);
+	.horizontal-padding(@padding);
+}

@@ -2,7 +2,7 @@
     "name": "Sextant"
   , "version": "0.0.1"
   , "private": true
-  , "main": "server.js"
+  , "main": "app.js"
   , "dependencies": {
       "express": "latest"
     , "stache": "latest"

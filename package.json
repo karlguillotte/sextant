@@ -8,6 +8,7 @@
     , "stache": "latest"
 	, "markdown": "latest"
 	, "express-rewrite": "latest"
+	, "express-params": "latest"
 	, "underscore": "latest"
   }
 }

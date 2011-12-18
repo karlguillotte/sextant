@@ -1,49 +1,62 @@
+
+
+
 /**
  * Module dependencies.
  */
 
-var express = require('express')
-  , app = express();
+var  express = require("express")
+	,routes = require("./routes")
+	// ,params = require('express-params')
+	// globalize = require("globalize"),
+	// lingua = require("lingua")
+	// i18n = require("i18n")
+	;
 
-app.use(express.logger('dev'));
-app.use(app.router);
+var app = module.exports = express.createServer();
 
-// the error handler is strategically
-// placed *below* the app.router; if it
-// were above it would not receive errors
-// from app.get() etc 
-app.use(error);
 
-// error handling middleware have an arity of 4
-// instead of the typical (req, res, next),
-// otherwise they behave exactly like regular
-// middleware, you may have several of them,
-// in different orders etc.
-
-function error(err, req, res, next) {
-  // log it
-  console.error(err.stack);
-
-  // respond with 500 "Internal Server Error".
-  res.send(500);
-}
-
-app.get('/', function(req, res){
-  // Caught and passed down to the errorHandler middleware
-  throw new Error('something broke!');
+// Configuration
+app.configure(function() {
+	app.set("views", __dirname + "/views");
+	app.set("view engine", "mustache");
+	app.register(".mustache", require("stache"));
+	app.use(express.bodyParser());
+	app.use(express.methodOverride());
+	app.use(app.router);
+	app.use(express.static(__dirname + "/public"));
 });
 
-app.get('/next', function(req, res, next){
-  // We can also pass exceptions to next()
-  process.nextTick(function(){
-    next(new Error('oh no!'));
-  });
+app.configure("development", function() {
+	app.use(express.errorHandler({
+		dumpExceptions: true,
+		showStack: true
+	}));
 });
+
+app.configure("production", function() {
+	app.use('/', express.errorHandler({ dump: true, stack: true }));
+});
+
+// Routes
+// params.extend(app);
+// Only en or fr are available for now...
+// app.param("lang", /fr|en/i);
+app.get("/", function(req, res) {
+	res.redirect("/" + req.headers["accept-language"].substring(0,2).toLowerCase() || "en");
+});
+app.get("/:lang/", function(req, res) {
+	// console.log(req.params);
+	console.log(req.params["lang"]);
+	res.redirect("/" + req.params.lang);
+	// res.redirect("/" + req.params.lang.input.toLowerCase());
+});
+app.get("/:lang", routes.index);
+app.error(function(err, req, res, next) {
+	console.log("erreur");
+	res.redirect("/");
+});
+
 
 app.listen(3000);
-console.log('app listening on port 3000');
-
-
-
-
-
+console.log("Express server listening on port %d in %s mode", app.address().port, app.settings.env);

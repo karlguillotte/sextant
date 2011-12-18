@@ -30,7 +30,7 @@
 		{
 			"identifier": "people",
 			"title":"## with creative __people__",
-			"content":"with a passion for the most recent web and geospatial technologies.\n\n### [Karl Guillotte](//about.me/karlguillotte)\n### Fido"
+			"content":"with a passion for the most recent web and geospatial technologies.\n\n### [Karl Guillotte](//about.me/karl.guillotte)\n### Fido"
 		},
 		{
 			"identifier": "product",

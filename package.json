@@ -5,8 +5,7 @@
   , "private": true
   , "main": "server.js"
   , "dependencies": {
-     "connect": "1.8.3"
-    , "express": "2.5.2"
+     "express": "2.5.2"
     ,"stache": "0.1.0"
 	,"markdown": "0.3.1"
 	,"underscore": "1.2.3"

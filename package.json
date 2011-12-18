@@ -5,11 +5,11 @@
   , "private": true
   , "main": "server.js"
   , "dependencies": {
-      "express": "latest"
-    , "stache": "latest"
-	, "markdown": "latest"
-	, "express-rewrite": "latest"
-	, "express-params": "latest"
-	, "underscore": "latest"
+      "express": "2.5.2"
+    , "stache": "0.1.0"
+	, "markdown": "0.3.1"
+	, "express-rewrite": "0.0.3"
+	, "express-params": "0.0.2"
+	, "underscore": "1.2.3"
   }
 }

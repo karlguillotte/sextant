@@ -1,6 +1,7 @@
 {
     "name": "Sextant"
   , "version": "0.0.1"
+  , "engines": { "node": "0.6.5" }
   , "private": true
   , "main": "server.js"
   , "dependencies": {

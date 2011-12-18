@@ -9,7 +9,6 @@
     , "stache": "0.1.0"
 	, "markdown": "0.3.1"
 	, "express-rewrite": "0.0.3"
-	, "express-params": "0.0.2"
 	, "underscore": "1.2.3"
   }
 }

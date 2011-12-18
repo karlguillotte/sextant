@@ -4,7 +4,7 @@
 
 var  express = require("express")
 	,routes = require("./routes")
-	,params = require('express-params')
+	// ,params = require('express-params')
 	// globalize = require("globalize"),
 	// lingua = require("lingua")
 	// i18n = require("i18n")
@@ -38,7 +38,7 @@ app.configure("production", function() {
 // Routes
 params.extend(app);
 // Only en or fr are available for now...
-app.param("lang", /fr|en/i);
+// app.param("lang", /fr|en/i);
 app.get("/", function(req, res) {
 	res.redirect("/" + req.headers["accept-language"].substring(0,2).toLowerCase() || "en");
 });

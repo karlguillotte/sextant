@@ -8,7 +8,6 @@
       "express": "2.5.2"
     , "stache": "0.1.0"
 	, "markdown": "0.3.1"
-	, "express-rewrite": "0.0.3"
 	, "underscore": "1.2.3"
   }
 }

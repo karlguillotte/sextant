@@ -36,14 +36,17 @@ app.configure("production", function() {
 });
 
 // Routes
-params.extend(app);
+// params.extend(app);
 // Only en or fr are available for now...
 // app.param("lang", /fr|en/i);
 app.get("/", function(req, res) {
 	res.redirect("/" + req.headers["accept-language"].substring(0,2).toLowerCase() || "en");
 });
 app.get("/:lang/", function(req, res) {
-	res.redirect("/" + req.params.lang.input.toLowerCase());
+	// console.log(req.params);
+	console.log(req.params["lang"]);
+	res.redirect("/" + req.params.lang);
+	// res.redirect("/" + req.params.lang.input.toLowerCase());
 });
 app.get("/:lang", routes.index);
 app.error(function(err, req, res, next) {

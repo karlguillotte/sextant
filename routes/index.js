@@ -36,7 +36,7 @@ for (locale in locales) {
 
 
 exports.index = function(req, res) {
-	var lang = req.params["lang"].input ||  "";
+	var lang = req.params["lang"] ||  "";
 	if (lang.toLowerCase() !== lang) {
 		res.redirect("/" + lang.toLowerCase());
 	}
